@@ -20,11 +20,12 @@
 				$token = 'qwertzuiopasdfghjklyxcvbnmQWERTZUIOPASDFGHJKLYXCVBNM0123456789!$/()*';
 				$token = str_shuffle($token);
 				$token = substr($token, 0, 10);
-				
+				date_default_timezone_set('Asia/Kolkata');
+				$created = date("Y-m-d H:i:s");
+                $msg = "$created";
 
-				$con->query("INSERT INTO users (email,isEmailConfirmed,token)
-					VALUES ('$email', '0', '$token');
-				");       
+				$con->query("INSERT INTO users (email,isEmailConfirmed,token,created)
+					VALUES ('$email', '0', '$token', '$created'); ");       
 
 				
                 include_once "PHPMailer/PHPMailer.php";
@@ -48,7 +49,7 @@
                 "<div><div class=\"header\" style=\"box-sizing:border-box;display:block;max-width:600px;margin:0 auto;padding:2px 10px 10px 10px;\"><img class=\"site-logo normal_logo\" style=\" height: 50px;width: 300px;margin-left: 25%;padding:10px 10px 0px 0px;color:#333;font-size: 13px;\" alt=\"UNICLAIR\" src=\"https://uniclair.com/wp-content/uploads/2018/04/Webp.net-resizeimage-1111.png\"><p class=\"m_3152237477592953147tagline\" style=\"color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:12px;font-weight:400;margin-left: 25%;padding:2px 0 0 40px;\">Unified Platform For Software Engineering</p></div>
                     
                 <div class=\"m_3152237477592953147content\" style=\"box-sizing:border-box;display:block;max-width:600px;margin:0 0 2% 28%;padding:10px\">Hi   $email ,<br /><br />Thanks for showing interest in our product. Below is our End User License Agreement. <br />Click the \"I Agree\" button to verify your email.</div>
-                <p class=\"download_link\" style=\"box-sizing:border-box;display:block;max-width:600px;margin-left: 29%;\"><strong><a href=\"http:\\localhost\EULA-v2.pdf\" download=\"UNICLAIR-EULA\" target=\"_blank\">Download the PDF Version</a></strong></p>
+                <p class=\"download_link\" style=\"box-sizing:border-box;display:block;max-width:600px;margin-left: 29%;\"><strong><a href=\"http://localhost/EULA-v2.pdf\" download=\"UNICLAIR-EULA\" target=\"_blank\">Download the PDF Version</a></strong></p>
                 <div id=\"content\" style=\"box-sizing:border-box;display:block;max-width:600px;overflow-y: scroll;height: 250px;width: 75%;border: 3px solid #054978;margin-left: 29%;padding: 10px;color: #333;font-size: 13px;\">
                     <p><strong>END USER LICENSE AGREEMENT</strong></p><br>
                     <p> 
@@ -154,8 +155,10 @@
     				</div>";
         			
         			
-                if ($mail->send())
+                if ($mail->send()){
                     $msg = "Entered Email has been registered! Waiting for email verification...";
+                    
+                }
                 else
                     $msg = "Something wrong happened! Please try again!";
 			}
@@ -192,7 +195,7 @@
 
 						}
 					</style>
-					<input class="btn btn-primary" style="background-color: #054978; border-radius: 17px; text-align: center;" type="submit" name="submit" value="Register">
+					<input class="btn btn-primary" style="background-color: #054978; border-radius: 17px; text-align: center; transform: .2s;" type="submit" name="submit" value="Register">
 				</form>
 
 			</div>

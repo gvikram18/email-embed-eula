@@ -20,26 +20,25 @@
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
+    padding: 2rem 2rem 4rem 4rem;
 ">
-  <h1 class="display-3" style="text-align: center;color: #8ecd4e">Your email has been verified!</h1>
+  <h1 class="display-3" style="text-align: center;color: #8ecd4e;">Your email has been verified!</h1>
   <p class="lead" style="text-align: center; color: #054978;"><strong>Please wait</strong> for further instructions on how to complete your account setup.</p>
-  <hr>
+  <hr><br><br>
+  <h3 class="display-5" style="text-align: center; color: #054978;"><strong>Close this page.</strong></h3><br>
   <p style="text-align: center;">
-    Having trouble? Mail us : <a href="#" style="color: #054978;"> support@ivtree.com</a>
-  </p>
-  <p class="lead" style="text-align: center;">
-    <button class="btn btn-primary btn-sm" style="background-color: #054978; border-radius: 17px; width: 200px;height: 50px;font-size: 16px;" href="https://uniclair.com/" role="button">Continue to homepage</button>
+    Having trouble? Mail us : <a href="mailto:support@ivtree.com" target="_top" style="color: #054978;"> support@ivtree.com</a>
   </p>
 </div>
-<div style="margin:30px auto;text-align:center;">
+<div style="margin-top:30px;text-align:center;">
 	<br><br>
 <hr>
 
 <a href="#" target="_blank"><img src="https://ivtree.com/wp-content/uploads/2017/04/fb-cover-7913-58d95c2f59692.jpg" alt="IVTREE" width="200"></a><br><br>
 <p style="margin:0;color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-weight:300;font-size:12px;margin-bottom:5px">© IVTREE IT Solutions.</p><p style="margin:0;color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-weight:300;font-size:12px;margin-bottom:5px">ThinkHub, 100-103 Export Promotion Industrial Park, Whitefield, Bengaluru, Karnataka 560066</p>
 
-<a href="https://in.linkedin.com/company/ivtree" target="_blank"><i class="fa fa-linkedin-square fa-stack-2x" aria-hidden="true"></i></a>
-
+<!--<a href="https://in.linkedin.com/company/ivtree" target="_blank"><i class="fa fa-linkedin-square fa-stack-2x" aria-hidden="true"></i></a>
+-->
 </div>
 </body>
 </html>
